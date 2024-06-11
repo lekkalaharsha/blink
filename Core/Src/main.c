@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include<stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -94,10 +95,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	     HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,1);
-	     HAL_Delay(1000);
-	     HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,0);
-	     HAL_Delay(200);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,1);
+	 HAL_Delay(1000);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,0);
+	 HAL_Delay(200);
+
 
     /* USER CODE END WHILE */
 

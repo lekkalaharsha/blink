@@ -27,25 +27,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  0000300c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00002904  00000000  00000000  00003035  2**0
+ 12 .debug_info   0000290b  00000000  00000000  00003035  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000e1e  00000000  00000000  00005939  2**0
+ 13 .debug_abbrev 00000e1e  00000000  00000000  00005940  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 000003d0  00000000  00000000  00006758  2**3
+ 14 .debug_aranges 000003d0  00000000  00000000  00006760  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 000002b8  00000000  00000000  00006b28  2**0
+ 15 .debug_rnglists 000002b8  00000000  00000000  00006b30  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00015918  00000000  00000000  00006de0  2**0
+ 16 .debug_macro  00016338  00000000  00000000  00006de8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00004977  00000000  00000000  0001c6f8  2**0
+ 17 .debug_line   00004ac8  00000000  00000000  0001d120  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0007bb7e  00000000  00000000  0002106f  2**0
+ 18 .debug_str    0007f24d  00000000  00000000  00021be8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  0009cbed  2**0
+ 19 .comment      00000043  00000000  00000000  000a0e35  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000d2c  00000000  00000000  0009cc30  2**2
+ 20 .debug_frame  00000d2c  00000000  00000000  000a0e78  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000005d  00000000  00000000  0009d95c  2**0
+ 21 .debug_line_str 0000005d  00000000  00000000  000a1ba4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -113,23 +113,23 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	     HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,1);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,1);
  800015c:	2201      	movs	r2, #1
  800015e:	f44f 5100 	mov.w	r1, #8192	@ 0x2000
  8000162:	4809      	ldr	r0, [pc, #36]	@ (8000188 <main+0x3c>)
  8000164:	f000 fc0c 	bl	8000980 <HAL_GPIO_WritePin>
-	     HAL_Delay(1000);
+	 HAL_Delay(1000);
  8000168:	f44f 707a 	mov.w	r0, #1000	@ 0x3e8
  800016c:	f000 f97c 	bl	8000468 <HAL_Delay>
-	     HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,0);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,0);
  8000170:	2200      	movs	r2, #0
  8000172:	f44f 5100 	mov.w	r1, #8192	@ 0x2000
  8000176:	4804      	ldr	r0, [pc, #16]	@ (8000188 <main+0x3c>)
  8000178:	f000 fc02 	bl	8000980 <HAL_GPIO_WritePin>
-	     HAL_Delay(200);
+	 HAL_Delay(200);
  800017c:	20c8      	movs	r0, #200	@ 0xc8
  800017e:	f000 f973 	bl	8000468 <HAL_Delay>
-	     HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,1);
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,1);
  8000182:	bf00      	nop
  8000184:	e7ea      	b.n	800015c <main+0x10>
  8000186:	bf00      	nop
