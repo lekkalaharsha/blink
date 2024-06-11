@@ -98,6 +98,7 @@ int main(void)
 	     HAL_Delay(1000);
 	     HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,0);
 	     HAL_Delay(200);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
